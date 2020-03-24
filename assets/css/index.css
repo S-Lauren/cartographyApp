@@ -6,18 +6,7 @@ html, body, #mapid {
         width: 100vw;
 }
 
-    /* body{
-         background-image: url("./assets/media/backgound.jpeg");
-        
-    }
-#mapid { height: 180px; }   */
-/* @media (min-width: 320px) and (max-width: 992px){
-    #mapid{
-      font-size:x-large;
-    }
-  }
-  @media (min-width: 992px) {
-    #mapid{
-      font-size:xx-large;
-    }
-  } */
+.navbar-brand a {
+
+  color: white !important; 
+} 

@@ -1,9 +1,9 @@
 
-import L from'leaflet';
-let mystorage = JSON.parse(localStorage.getItem("centres"));
-console.log(mystorage)
 
-export function test(){
+let mystorage = JSON.parse(localStorage.getItem("centres"));
+
+
+function test(){
 
     const mymap = L.map('mapid').setView([45.56673,5.930244],13);
         L.tileLayer( 'http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
@@ -21,7 +21,7 @@ export function test(){
         if(urlParams === mystorage.records[i].recordid) {
             let lat =mystorage.records[i].fields.localisation[0];
             let log = mystorage.records[i].fields.localisation[1];
-            const myIcon =  L.icon({iconUrl: './assets/media/leaf-orange.png '});
+            const myIcon =  L.icon({iconUrl: '../assets/media/leaf-orange.png '});
             let namecenter = mystorage.records[i].fields.nom_structure
             let phone = mystorage.records[i].fields.coord_tel
             let adress = mystorage.records[i].fields.adresse     
@@ -43,7 +43,7 @@ export function test(){
             let lat =mystorage.records[i].fields.localisation[0];
             let log = mystorage.records[i].fields.localisation[1];
             let marker= L.icon({
-            iconUrl: './assets/media/leaf-red.png '});
+            iconUrl: '../assets/media/leaf-red.png '});
             let namecenter=mystorage.records[i].fields.nom_structure;  
             L.marker([lat, log],{icon: marker}).addTo(mymap).bindTooltip(`${namecenter}`);   
         }
@@ -51,7 +51,7 @@ export function test(){
 }
 
 
-
+test();
 
 
 

@@ -64,13 +64,12 @@ const centreStorage = JSON.parse(communesStorage.getItem("centres"));
 
 
 
-export function findCommunes(input, quartier) {
+function findCommunes(input, quartier) {
 
     let matches = quartier.records.filter((x,i) =>  {
       
         return x.fields['quartier'].toLowerCase().includes(input.toLowerCase());    
-     // let regEx = new RegExp(`${input}`, `gi`); 
-        // return x.fields["quartier"].match(regEx); 
+
     });
 
 
