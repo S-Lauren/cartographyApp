@@ -1,0 +1,23 @@
+.titre{
+    margin-top: 10rem;
+}
+html, body, #mapid {
+        height: 100%;
+        width: 100vw;
+}
+
+    /* body{
+         background-image: url("./assets/media/backgound.jpeg");
+        
+    }
+#mapid { height: 180px; }   */
+/* @media (min-width: 320px) and (max-width: 992px){
+    #mapid{
+      font-size:x-large;
+    }
+  }
+  @media (min-width: 992px) {
+    #mapid{
+      font-size:xx-large;
+    }
+  } */
