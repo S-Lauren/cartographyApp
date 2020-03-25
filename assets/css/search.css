@@ -1,37 +1,35 @@
 .search-container {
-    width: 100%; 
-    height: 100vh; 
-    background-color: #eaeaea;
+width: 100%; 
+height: 100vh; 
+background-color: #eaeaea;
 }
-.search-form {
-   padding-top: 80px;  
- 
+.search-form-container {
+padding-top: 80px;  
 }
 
 input {
-
-    width: 100%;
-    border: none; 
-
+width: 100%;
+border: none; 
+height: 40px; 
+margin-top: 20px;
 }
 
 button {
-    margin-top: 20px !important; 
-    height: 35px; 
-    border: none; 
-    margin-bottom: 20px !important; 
-   
+margin-top: 20px !important; 
+height: 35px; 
+border: none; 
+margin-bottom: 20px !important; 
 }
 
 
 
 a {
-    color: #FFF !important;
+color: #FFF !important;
 }
 
 button:hover {
-    background-color: darkcyan !important;
-    border: none;  
+background-color: darkcyan !important;
+border: none;  
 }
 
 
@@ -43,17 +41,54 @@ text-decoration: none !important;
 }
 
 .card-title {
-
-    font-weight: bold; 
-    color: black !important; 
+font-weight: bold; 
+color: black !important; 
 }
 
 
 .subtitle {
-    color: darkcyan; 
-    font-weight: bold; 
+color: darkcyan; 
+font-weight: bold; 
 }
 
 .card-text {
-    color: black !important;
+color: black !important;
+}
+
+.search-form {
+display: flex;
+justify-content: center;
+flex-direction: column;
+padding: 40px;
+
+}
+.search-label {
+font-family: arial; 
+font-weight: bold; 
+font-size: 30px; 
+text-align: center; 
+line-height: 1.1em;
+}
+.card-btn {
+background-color: darkcyan;
+border-radius: 50px; 
+color: white; 
+border: none; 
+width: 200px; 
+height: 40px; 
+
+}
+.card-btn:hover {
+background-color: #25c4b7 !important;
+}
+.card-btn a {
+font-family: arial;
+font-weight: bold; 
+color: white; 
+}
+.card-btn a:hover {
+font-family: arial;
+font-weight: bold; 
+color: white; 
+text-decoration: none; 
 }

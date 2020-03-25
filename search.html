@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../assets/css/index.css">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link href="./assets/css/search.css" rel="stylesheet">
     <title>Searching</title>
 </head>
@@ -17,8 +17,11 @@
     </nav>
 
     <div class="search-container">
-        <div class="search-form">
-            <input id="search" type="text" placeholder="Entrez votre quartier...">
+        <div class="search-form-container">
+            <form class="search-form">
+                <label class="search-label">Chercher un centre proche de votre commune</label>
+                <input id="search" type="text" placeholder="Commune, quartier à Chambéry...">
+            </form>
             <div id="match-list"></div>
         </div>
     </div> 

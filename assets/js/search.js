@@ -90,12 +90,12 @@ function outPutHtml(html) {
                         <h3 class="subtitle">${x.fields["quartier"]} </h3>
                         <p class="card-text">${x.fields["accueil_horaires"]}
                         ${x.fields["adresse"]} </p>
-                        <button class="btn btn-dark"> <a href="./carte.html?recordid=${x.recordid}"> ${string} </a></button>
+                        <button class="card-btn"> <a href="./carte.html?recordid=${x.recordid}"> ${string} </a></button>
                     </div>
                 </div>
             </div>
         
-    </div>`);
+    </div>`).join('');
 
 }
     
