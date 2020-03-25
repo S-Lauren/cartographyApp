@@ -61,35 +61,24 @@ fetch("https://donnees.grandchambery.fr/api/records/1.0/search/?dataset=accueils
 // Here is the local storage.
 const centreStorage = JSON.parse(communesStorage.getItem("centres")); 
 
-
-
-
 function findCommunes(input, quartier) {
-
     let matches = quartier.records.filter((x,i) =>  {
-      
-        return x.fields['quartier'].toLowerCase().includes(input.toLowerCase());    
-
-    });
-
+    return x.fields['quartier'].toLowerCase().includes(input.toLowerCase());    
+});
 
     if(input.length === 0) {
         matches = [];
         matches.innerHTML = '';  
     }
     outPutHtml(matches);
-    const list = document.querySelectorAll(".card"); 
+    // const list = document.querySelectorAll(".card"); 
 
-    // list.forEach(x => x.addEventListener('click', findMarker)); 
 }
 
 let string ="Voir sur la carte"; 
 function outPutHtml(html) {
-
     matchList.innerHTML = html.map(x => `
-
     <div class="card" style="margin-top=10px;" data-id="${x.recordid}">
-      
             <div class="row">
                 <div class="col-md-4">
                     <img class="img-thumbnail"  src=${x.fields["images"]}>
@@ -101,7 +90,7 @@ function outPutHtml(html) {
                         <h3 class="subtitle">${x.fields["quartier"]} </h3>
                         <p class="card-text">${x.fields["accueil_horaires"]}
                         ${x.fields["adresse"]} </p>
-                        <button class="btn btn-dark"> <a href="./cart.html?recordid=${x.recordid}"> ${string} </a></button>
+                        <button class="btn btn-dark"> <a href="./carte.html?recordid=${x.recordid}"> ${string} </a></button>
                     </div>
                 </div>
             </div>

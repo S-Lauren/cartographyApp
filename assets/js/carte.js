@@ -21,36 +21,22 @@ function test(){
         if(urlParams === mystorage.records[i].recordid) {
             let lat =mystorage.records[i].fields.localisation[0];
             let log = mystorage.records[i].fields.localisation[1];
-            const myIcon =  L.icon({iconUrl: '../assets/media/leaf-orange.png '});
+            const myIcon =  L.icon({iconUrl: './assets/media/leaf-orange.png '});
             let namecenter = mystorage.records[i].fields.nom_structure
             let phone = mystorage.records[i].fields.coord_tel
             let adress = mystorage.records[i].fields.adresse     
             L.marker([lat, log], {icon: myIcon}).addTo(mymap).bindTooltip(`${namecenter}<br>${phone}<br>${adress}`).openTooltip();
-        ////////////////////
-        //    function addMarker() {
-        //     L.marker(testmarker)
-        //       .on('click', function() {
-        //         centerLeafletMapOnMarker(map, this);
-        //       })
-        //       .addTo(map);
-        //   }
-        //   function centerLeafletMapOnMarker(map, marker) {
-        //     var latLngs = [ marker.getLatLng() ];
-        //     var markerBounds = L.latLngBounds(latLngs);
-        //     map.setView(markerBounds);
-        //   }
+      
         } else {
             let lat =mystorage.records[i].fields.localisation[0];
             let log = mystorage.records[i].fields.localisation[1];
             let marker= L.icon({
-            iconUrl: '../assets/media/leaf-red.png '});
+            iconUrl: './assets/media/leaf-red.png '});
             let namecenter=mystorage.records[i].fields.nom_structure;  
             L.marker([lat, log],{icon: marker}).addTo(mymap).bindTooltip(`${namecenter}`);   
         }
     }
 }
-
-
 test();
 
 

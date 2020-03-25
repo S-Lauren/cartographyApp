@@ -1,12 +1,69 @@
 .titre{
-    margin-top: 10rem;
+margin-top: 10rem;
 }
-html, body, #mapid {
-        height: 100%;
-        width: 100vw;
+html, body {
+margin: 0; 
+padding: 0; 
+}
+#mapid {
+height: 100%;
+width: 100vw;
 }
 
 .navbar-brand a {
-
-  color: white !important; 
+color: white !important; 
 } 
+
+.banner-container {
+width: 100%;  
+height: 100vh;
+}
+
+.banner {
+width: 100%; 
+height: 100vh; 
+
+background-image:  linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)
+),url("https://source.unsplash.com/J-Jb1niw1j0");
+background-repeat: no-repeat;
+background-size: 100%;
+}
+
+.banner-title {
+padding-top: 50px; 
+padding-left: 50px; 
+font-family: Arial; 
+font-weight: bold;
+color: white; 
+}
+
+.banner-btn {
+margin-top: 50px; 
+margin-left: 50px; 
+background-color: darkcyan;
+border-radius: 50px; 
+color: white; 
+border: none; 
+width: 200px; 
+height: 40px; 
+
+}
+.banner-btn:hover {
+background-color: #25c4b7;
+}
+.banner-btn a {
+font-family: arial;
+font-weight: bold; 
+color: white; 
+}
+.banner-btn a:hover {
+font-family: arial;
+font-weight: bold; 
+color: white; 
+text-decoration: none; 
+}
+
+.banner-dark-layer {
+width: 100%; 
+height: 30px; 
+}
