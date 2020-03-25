@@ -1,15 +1,12 @@
 
 
-/*  Select My Search bar and my div that will show the result list   */
-
 const search = document.getElementById("search"); 
 const matchList = document.getElementById("match-list");
 
-/*  Select My API URL */
+
 const url = "https://donnees.grandchambery.fr/api/records/1.0/search/?dataset=accueils-loisirs-pour-les-317-ans-a-chambery"; 
 
 
-/*  Set an image array that I'll add later to my JSON file */
 let imageArr = [
 "https://www.mjc-chambery.com/images_articles/42bec15675e7b310660f34e7621cb934.jpg",
 "https://www.sport-savoie.fr/images/divers/2017/FETESPORTBIOLLAY/IMG_5484BIS.jpg",
@@ -37,7 +34,6 @@ let imageArr = [
 
 let communes; 
 
-
 let communesStorage = window.localStorage; 
 
 fetch("https://donnees.grandchambery.fr/api/records/1.0/search/?dataset=accueils-loisirs-pour-les-317-ans-a-chambery&rows=20&facet=type&facet=commune&facet=quartier&facet=public&location=")
@@ -47,18 +43,14 @@ fetch("https://donnees.grandchambery.fr/api/records/1.0/search/?dataset=accueils
     communes = data;
 
     search.addEventListener('input', () => findCommunes(search.value, communes));
-
     communes.records.map((x,i) => {
-        x.fields["images"] = imageArr[i]; 
-    
+        x.fields["images"] = imageArr[i];  
     })
 
     communesStorage.setItem("centres",JSON.stringify(communes)); 
     console.log(communesStorage);
 });
 
-
-// Here is the local storage.
 const centreStorage = JSON.parse(communesStorage.getItem("centres")); 
 
 function findCommunes(input, quartier) {
@@ -71,7 +63,6 @@ function findCommunes(input, quartier) {
         matches.innerHTML = '';  
     }
     outPutHtml(matches);
-    // const list = document.querySelectorAll(".card"); 
 
 }
 
@@ -85,7 +76,6 @@ function outPutHtml(html) {
                 </div>       
                 <div class="col-md-8 px-3">
                     <div class="card-block px-3">
-
                         <h2 class="card-title">${x.fields["nom_structure"]} </h2>
                         <h3 class="subtitle">${x.fields["quartier"]} </h3>
                         <p class="card-text">${x.fields["accueil_horaires"]}

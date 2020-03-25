@@ -3,12 +3,13 @@
 let mystorage = JSON.parse(localStorage.getItem("centres"));
 
 
+
 function test(){
 
     const mymap = L.map('mapid').setView([45.56673,5.930244],13);
-        L.tileLayer( 'http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
+        L.tileLayer( 'https://maps.heigit.org/openmapsurfer/tiles/roads/webmercator/{z}/{x}/{y}.png', {
         attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
-        maxZoom: 100,
+        maxZoom: 17,
         id: 'mapbox/streets-v11',
         tileSize: 512,
         zoomOffset: -1,
