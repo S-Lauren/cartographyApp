@@ -48,22 +48,26 @@ fetch("https://donnees.grandchambery.fr/api/records/1.0/search/?dataset=accueils
     })
 
     communesStorage.setItem("centres",JSON.stringify(communes)); 
-    console.log(communesStorage);
+    
 });
 
 const centreStorage = JSON.parse(communesStorage.getItem("centres")); 
 
 function findCommunes(input, quartier) {
     let matches = quartier.records.filter((x,i) =>  {
+ 
     return x.fields['quartier'].toLowerCase().includes(input.toLowerCase());    
 });
 
-    if(input.length === 0) {
-        matches = [];
-        matches.innerHTML = '';  
-    }
-    outPutHtml(matches);
 
+
+  if((matches.length === 0)) {
+      matches = [];
+      matchList.innerHTML = `<p class="nomatches">No matches found...</p>`;  
+    }
+  else {
+      outPutHtml(matches);
+  }
 }
 
 let string ="Voir sur la carte"; 

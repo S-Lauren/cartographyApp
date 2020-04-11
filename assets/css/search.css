@@ -92,3 +92,9 @@ font-weight: bold;
 color: white; 
 text-decoration: none; 
 }
+
+.nomatches {
+  margin-left: 50px; 
+  color: red;
+  text-align: "center"; 
+}
