@@ -2,7 +2,14 @@
 
 let mystorage = JSON.parse(localStorage.getItem("centres"));
 
+// Url search param//. 
 
+// let btnLink = document.querySelector(".nav-link-btn");
+
+// btnLink.addEventListener(() => {
+//         var paramsString = new URLSearchParams(window.location.search);
+//     var urlParams = paramsString.set('recordid');
+// }, "click");
 
 function test(){
 
